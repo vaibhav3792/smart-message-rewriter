@@ -1,3 +1,4 @@
+﻿fastapi
+uvicorn[standard]
 groq==1.7.0
 python-dotenv
-pytest

@@ -4,6 +4,10 @@ from dotenv import load_dotenv
 from groq import Groq
 from groq import APIConnectionError, APIStatusError, RateLimitError
 
+class LLMServiceError(RuntimeError):
+    """Raised when the external LLM service fails."""
+
+
 load_dotenv()
 
 api_key = os.getenv("GROQ_API_KEY")
@@ -42,10 +46,16 @@ def generate_response(system_prompt, user_prompt):
         return generated_text.strip()
 
     except RateLimitError as e:
-        raise RuntimeError("The LLM service rate limit was exceeded.") from e
+        raise LLMServiceError(
+            "The LLM service rate limit was exceeded."
+        ) from e
 
     except APIConnectionError as e:
-        raise RuntimeError("Unable to connect to the LLM service.") from e
+        raise LLMServiceError(
+            "Unable to connect to the LLM service."
+        ) from e
 
     except APIStatusError as e:
-        raise RuntimeError("The LLM service returned an API error.") from e
+        raise LLMServiceError(
+            "The LLM service returned an API error."
+        ) from e
