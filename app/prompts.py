@@ -48,9 +48,10 @@ Preferences:
 Instructions:
 - Adapt the wording to suit the selected tone and recipient.
 - For length:
-    - Concise: Keep it brief while preserving essential information.
-    - Balanced: Maintain a natural, appropriate length.
-    - Detailed: Improve clarity and completeness without inventing information.
+    - Concise: Significantly shorten the message. Remove repetition, wordiness, and non-essential context while preserving all important information. Aim for approximately 40-60% of the original word count where possible.
+    - Balanced: Maintain approximately the same length as the original. Improve clarity and flow without unnecessary expansion or compression.
+    - Detailed: Make the message substantially more elaborate and descriptive. Expand explanations, clarify existing points, and develop the context already present in the original. Aim for approximately 170-200% of the original word count where appropriate. Expand only by clarifying or elaborating on information explicitly present in the original. Do not introduce new claims, assumptions, reasons, objectives, or commitments merely to increase length.
+    - Preserve every original fact, deadline, commitment, and meaningful detail. Expansion must not come at the cost of completeness or natural phrasing.
 - Consider the recipient when choosing appropriate language.
 - Do not automatically add greetings or sign-offs based on the recipient.
 - Preserve the original communication format.
