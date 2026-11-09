@@ -22,7 +22,6 @@ client = Groq(api_key=api_key)
 MODEL_NAME = "openai/gpt-oss-120b"
 
 
-
 def generate_response(system_prompt, user_prompt):
     try:
         response = client.chat.completions.create(
@@ -31,7 +30,7 @@ def generate_response(system_prompt, user_prompt):
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
             ],
-            temperature=0.3,
+            temperature=0.0,
             max_completion_tokens=1024,
         )
 

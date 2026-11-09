@@ -1,4 +1,4 @@
-
+from app.safety import RewriteSafetyError
 from fastapi.testclient import TestClient
 
 from app.main import app
@@ -144,3 +144,24 @@ def test_rewrite_handles_unexpected_runtime_error(monkeypatch):
     )
 
     assert response.status_code == 500
+
+def test_rewrite_rejects_unsafe_action_status_change(monkeypatch):
+    def fake_rewrite_message(message, tone, length, recipient):
+        raise RewriteSafetyError(
+            "Potential action-status change detected."
+        )
+
+    monkeypatch.setattr(
+        "app.main.rewrite_message",
+        fake_rewrite_message
+    )
+
+    response = client.post(
+        "/api/rewrite",
+        json={"message": "I am sending the report."}
+    )
+
+    assert response.status_code == 422
+    assert response.json()["detail"] == (
+        "Potential action-status change detected."
+    )

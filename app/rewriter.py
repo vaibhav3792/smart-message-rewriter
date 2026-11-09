@@ -8,6 +8,12 @@ from app.config import (
 from app.prompts import SYSTEM_PROMPT, build_user_prompt
 from app.llm import generate_response
 
+from app.safety import (
+    detect_action_status_changes,
+    RewriteSafetyError,
+)
+
+
 MAX_MESSAGE_LENGTH = 5000
 
 def rewrite_message(
@@ -41,5 +47,17 @@ def rewrite_message(
     rewritten_message = generate_response(
         SYSTEM_PROMPT, user_prompt
     )
+
+    # Check for potential action-status changes
+    changed_actions = detect_action_status_changes(
+        message,
+        rewritten_message,
+    )
+
+    if changed_actions:
+        raise RewriteSafetyError(
+            "The rewrite may have changed the status of an action. "
+            "Please try again or review the original message."
+        )
 
     return rewritten_message

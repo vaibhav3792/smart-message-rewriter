@@ -165,3 +165,58 @@ def test_llm_handles_rate_limit_error(monkeypatch):
 
     with pytest.raises(RuntimeError, match="rate limit"):
         generate_response("system prompt", "user prompt")
+
+
+
+from app.safety import detect_action_status_changes
+
+
+def test_detects_ongoing_action_changed_to_completed():
+    original = "I finished the report. Sending it now."
+    rewritten = "The report is finished and has been sent."
+
+    result = detect_action_status_changes(original, rewritten)
+
+    assert result == ["send"]
+
+
+def test_does_not_flag_preserved_ongoing_action():
+    original = "I am sending the report now."
+    rewritten = "I am currently sending the report."
+
+    result = detect_action_status_changes(original, rewritten)
+
+    assert result == []
+
+
+def test_does_not_flag_future_action():
+    original = "I will send the report tomorrow."
+    rewritten = "I will share the report tomorrow."
+
+    result = detect_action_status_changes(original, rewritten)
+
+    assert result == []
+
+
+def test_detects_multiple_action_status_changes():
+    original = "I am preparing the report and reviewing the data."
+    rewritten = "The report is prepared and the data has been reviewed."
+
+    result = detect_action_status_changes(original, rewritten)
+
+    assert set(result) == {"prepare", "review"}
+
+from app.safety import RewriteSafetyError
+
+
+def test_rewrite_rejects_action_status_change(monkeypatch):
+    monkeypatch.setattr(
+        "app.rewriter.generate_response",
+        lambda system_prompt, user_prompt:
+            "The report is complete and has been sent."
+    )
+
+    with pytest.raises(RewriteSafetyError):
+        rewrite_message(
+            "I finished the report. Sending it now."
+        )

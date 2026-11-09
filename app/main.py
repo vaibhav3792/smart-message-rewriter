@@ -1,4 +1,4 @@
-
+from app.safety import RewriteSafetyError
 from fastapi import FastAPI, HTTPException
 from app.schemas import RewriteRequest, RewriteResponse
 from app.rewriter import rewrite_message
@@ -49,7 +49,11 @@ def rewrite(request: RewriteRequest):
         return RewriteResponse(
             rewritten_message=rewritten
         )
-
+    except RewriteSafetyError as e:
+        raise HTTPException(
+            status_code=422,
+            detail=str(e),
+        ) from e
     except ValueError as e:
         raise HTTPException(
             status_code=400,

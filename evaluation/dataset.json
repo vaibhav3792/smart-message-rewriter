@@ -1,0 +1,520 @@
+﻿[
+    {
+        "id":  "eval_001",
+        "message":  "Can\u0027t attend tomorrow. Have an exam. Can we meet Friday?",
+        "tone":  "professional",
+        "length":  "balanced",
+        "recipient":  "professor",
+        "must_preserve":  [
+                              "Cannot attend tomorrow",
+                              "Reason is an exam",
+                              "Requests rescheduling to Friday"
+                          ],
+        "expected_characteristics":  [
+                                         "Respectful",
+                                         "Professional",
+                                         "Clear"
+                                     ]
+    },
+    {
+        "id":  "eval_002",
+        "message":  "hey are you coming to the fest? we need to book tickets",
+        "tone":  "casual",
+        "length":  "concise",
+        "recipient":  "friend",
+        "must_preserve":  [
+                              "Asks whether the recipient is attending the fest",
+                              "Tickets need to be booked"
+                          ],
+        "expected_characteristics":  [
+                                         "Conversational",
+                                         "Friendly",
+                                         "Concise"
+                                     ]
+    },
+    {
+        "id":  "eval_003",
+        "message":  "I completed the assigned task but couldn\u0027t finish testing because the server was down. I\u0027ll complete testing once it\u0027s available.",
+        "tone":  "professional",
+        "length":  "balanced",
+        "recipient":  "senior",
+        "must_preserve":  [
+                              "Assigned task is completed",
+                              "Testing is incomplete",
+                              "Server downtime prevented testing",
+                              "Testing will be completed when the server becomes available"
+                          ],
+        "expected_characteristics":  [
+                                         "Professional",
+                                         "Accountable",
+                                         "Clear"
+                                     ],
+        "original_recipient":  "manager"
+    },
+    {
+        "id":  "eval_004",
+        "message":  "sorry for late reply. was busy with college work. will send the documents by 5 pm today",
+        "tone":  "formal",
+        "length":  "concise",
+        "recipient":  "colleague",
+        "must_preserve":  [
+                              "Apologizes for the delayed response",
+                              "College work caused the delay",
+                              "Documents will be sent by 5 PM today"
+                          ],
+        "expected_characteristics":  [
+                                         "Formal",
+                                         "Polite",
+                                         "Concise"
+                                     ],
+        "original_recipient":  "client"
+    },
+    {
+        "id":  "eval_005",
+        "message":  "The payment was 2500, not 2000. Please update the invoice. Don\u0027t change the delivery date of 15 November.",
+        "tone":  "professional",
+        "length":  "balanced",
+        "recipient":  "colleague",
+        "must_preserve":  [
+                              "Correct payment amount is 2500",
+                              "Previously stated amount was 2000",
+                              "Invoice needs updating",
+                              "Delivery date must remain 15 November"
+                          ],
+        "expected_characteristics":  [
+                                         "Professional",
+                                         "Unambiguous",
+                                         "Preserves numerical details"
+                                     ],
+        "original_recipient":  "vendor"
+    },
+    {
+        "id":  "eval_006",
+        "message":  "finished the report. sending it now. let me know if anything needs changes",
+        "tone":  "professional",
+        "length":  "concise",
+        "recipient":  "senior",
+        "must_preserve":  [
+                              "Report is completed",
+                              "Report is being sent now",
+                              "Recipient can request changes"
+                          ],
+        "expected_characteristics":  [
+                                         "Professional",
+                                         "Concise",
+                                         "Clear"
+                                     ],
+        "original_recipient":  "manager"
+    },
+    {
+        "id":  "eval_007",
+        "message":  "need the project files from you. send them whenever possible",
+        "tone":  "professional",
+        "length":  "balanced",
+        "recipient":  "colleague",
+        "must_preserve":  [
+                              "Requests project files",
+                              "No specific deadline is imposed"
+                          ],
+        "expected_characteristics":  [
+                                         "Polite",
+                                         "Professional",
+                                         "Non-demanding"
+                                     ]
+    },
+    {
+        "id":  "eval_008",
+        "message":  "i disagree with this approach. it will increase development time and make maintenance harder",
+        "tone":  "professional",
+        "length":  "balanced",
+        "recipient":  "colleague",
+        "must_preserve":  [
+                              "Disagrees with the approach",
+                              "Development time may increase",
+                              "Maintenance may become harder"
+                          ],
+        "expected_characteristics":  [
+                                         "Constructive",
+                                         "Professional",
+                                         "Clear"
+                                     ],
+        "original_recipient":  "team"
+    },
+    {
+        "id":  "eval_009",
+        "message":  "sorry i missed your call. was in class. can i call you after 3?",
+        "tone":  "friendly",
+        "length":  "concise",
+        "recipient":  "friend",
+        "must_preserve":  [
+                              "Apologizes for missing the call",
+                              "Was in class",
+                              "Asks to call after 3"
+                          ],
+        "expected_characteristics":  [
+                                         "Friendly",
+                                         "Natural",
+                                         "Concise"
+                                     ]
+    },
+    {
+        "id":  "eval_010",
+        "message":  "the meeting was useful. we should discuss the implementation details next week",
+        "tone":  "professional",
+        "length":  "balanced",
+        "recipient":  "colleague",
+        "must_preserve":  [
+                              "Meeting was useful",
+                              "Suggests discussing implementation details next week"
+                          ],
+        "expected_characteristics":  [
+                                         "Professional",
+                                         "Positive",
+                                         "Clear"
+                                     ]
+    },
+    {
+        "id":  "eval_011",
+        "message":  "bro that was amazing. you really nailed the presentation",
+        "tone":  "casual",
+        "length":  "concise",
+        "recipient":  "friend",
+        "must_preserve":  [
+                              "Expresses strong appreciation",
+                              "Praises the presentation"
+                          ],
+        "expected_characteristics":  [
+                                         "Casual",
+                                         "Enthusiastic",
+                                         "Natural"
+                                     ]
+    },
+    {
+        "id":  "eval_012",
+        "message":  "can\u0027t join tonight. something came up at home. let\u0027s catch up this weekend",
+        "tone":  "friendly",
+        "length":  "balanced",
+        "recipient":  "friend",
+        "must_preserve":  [
+                              "Cannot join tonight",
+                              "Something came up at home",
+                              "Suggests catching up this weekend"
+                          ],
+        "expected_characteristics":  [
+                                         "Warm",
+                                         "Conversational",
+                                         "Natural"
+                                     ]
+    },
+    {
+        "id":  "eval_013",
+        "message":  "send me the notes when you\u0027re free. no rush",
+        "tone":  "casual",
+        "length":  "concise",
+        "recipient":  "friend",
+        "must_preserve":  [
+                              "Requests notes",
+                              "No urgency"
+                          ],
+        "expected_characteristics":  [
+                                         "Relaxed",
+                                         "Friendly",
+                                         "Concise"
+                                     ],
+        "original_recipient":  "classmate"
+    },
+    {
+        "id":  "eval_014",
+        "message":  "we won the competition! couldn\u0027t have done it without everyone\u0027s effort",
+        "tone":  "friendly",
+        "length":  "balanced",
+        "recipient":  "colleague",
+        "must_preserve":  [
+                              "Team won the competition",
+                              "Credits everyone\u0027s effort"
+                          ],
+        "expected_characteristics":  [
+                                         "Celebratory",
+                                         "Appreciative",
+                                         "Natural"
+                                     ],
+        "original_recipient":  "team"
+    },
+    {
+        "id":  "eval_015",
+        "message":  "are we still on for lunch tomorrow?",
+        "tone":  "casual",
+        "length":  "concise",
+        "recipient":  "friend",
+        "must_preserve":  [
+                              "Asks whether lunch tomorrow is still planned"
+                          ],
+        "expected_characteristics":  [
+                                         "Conversational",
+                                         "Brief",
+                                         "Natural"
+                                     ]
+    },
+    {
+        "id":  "eval_016",
+        "message":  "i request you to consider my application for the internship. i have attached my resume",
+        "tone":  "formal",
+        "length":  "balanced",
+        "recipient":  "recruiter",
+        "must_preserve":  [
+                              "Requests consideration for internship",
+                              "Resume is attached"
+                          ],
+        "expected_characteristics":  [
+                                         "Formal",
+                                         "Respectful",
+                                         "Professional"
+                                     ]
+    },
+    {
+        "id":  "eval_017",
+        "message":  "thank you for taking the time to interview me. i look forward to hearing from you",
+        "tone":  "formal",
+        "length":  "concise",
+        "recipient":  "recruiter",
+        "must_preserve":  [
+                              "Thanks interviewer for their time",
+                              "Looks forward to hearing back"
+                          ],
+        "expected_characteristics":  [
+                                         "Formal",
+                                         "Gracious",
+                                         "Concise"
+                                     ],
+        "original_recipient":  "interviewer"
+    },
+    {
+        "id":  "eval_018",
+        "message":  "i will not be able to submit the assignment today. may i request an extension until monday?",
+        "tone":  "formal",
+        "length":  "balanced",
+        "recipient":  "professor",
+        "must_preserve":  [
+                              "Cannot submit today",
+                              "Requests extension until Monday"
+                          ],
+        "expected_characteristics":  [
+                                         "Respectful",
+                                         "Formal",
+                                         "Clear"
+                                     ]
+    },
+    {
+        "id":  "eval_019",
+        "message":  "we received your complaint and are looking into the issue. we will update you once we have more information",
+        "tone":  "formal",
+        "length":  "balanced",
+        "recipient":  "colleague",
+        "must_preserve":  [
+                              "Complaint was received",
+                              "Issue is being investigated",
+                              "Update will follow when information is available"
+                          ],
+        "expected_characteristics":  [
+                                         "Formal",
+                                         "Reassuring",
+                                         "Professional"
+                                     ],
+        "original_recipient":  "customer"
+    },
+    {
+        "id":  "eval_020",
+        "message":  "can you review the pull request before merging? there are a few changes i want to discuss",
+        "tone":  "professional",
+        "length":  "balanced",
+        "recipient":  "senior",
+        "must_preserve":  [
+                              "Requests pull request review before merging",
+                              "Some changes need discussion"
+                          ],
+        "expected_characteristics":  [
+                                         "Respectful",
+                                         "Technically clear",
+                                         "Professional"
+                                     ],
+        "original_recipient":  "senior developer"
+    },
+    {
+        "id":  "eval_021",
+        "message":  "i need your approval for the budget by wednesday so we can proceed with procurement",
+        "tone":  "professional",
+        "length":  "concise",
+        "recipient":  "senior",
+        "must_preserve":  [
+                              "Approval is needed for the budget",
+                              "Deadline is Wednesday",
+                              "Procurement depends on approval"
+                          ],
+        "expected_characteristics":  [
+                                         "Direct",
+                                         "Professional",
+                                         "Clear"
+                                     ],
+        "original_recipient":  "manager"
+    },
+    {
+        "id":  "eval_022",
+        "message":  "please don\u0027t publish the announcement until i confirm the final date",
+        "tone":  "professional",
+        "length":  "concise",
+        "recipient":  "colleague",
+        "must_preserve":  [
+                              "Announcement must not be published yet",
+                              "Final date confirmation is required first"
+                          ],
+        "expected_characteristics":  [
+                                         "Unambiguous",
+                                         "Direct",
+                                         "Professional"
+                                     ],
+        "original_recipient":  "marketing team"
+    },
+    {
+        "id":  "eval_023",
+        "message":  "i might be able to join the call, but i can\u0027t confirm until i check my schedule",
+        "tone":  "professional",
+        "length":  "balanced",
+        "recipient":  "colleague",
+        "must_preserve":  [
+                              "Joining the call is uncertain",
+                              "Confirmation depends on checking the schedule"
+                          ],
+        "expected_characteristics":  [
+                                         "Professional",
+                                         "Preserves uncertainty",
+                                         "Clear"
+                                     ]
+    },
+    {
+        "id":  "eval_024",
+        "message":  "the first version is ready. don\u0027t replace the existing file yet because i still need to verify it",
+        "tone":  "professional",
+        "length":  "balanced",
+        "recipient":  "colleague",
+        "must_preserve":  [
+                              "First version is ready",
+                              "Existing file must not be replaced",
+                              "Verification is still pending"
+                          ],
+        "expected_characteristics":  [
+                                         "Clear",
+                                         "Professional",
+                                         "Preserves restrictions"
+                                     ],
+        "original_recipient":  "team"
+    },
+    {
+        "id":  "eval_025",
+        "message":  "I need to inform you that the scheduled maintenance will take place between 10 PM and 11 PM on 18 November. The service may be temporarily unavailable during this period. Please save your work beforehand.",
+        "tone":  "professional",
+        "length":  "concise",
+        "recipient":  "colleague",
+        "must_preserve":  [
+                              "Maintenance is on 18 November",
+                              "Time is 10 PM to 11 PM",
+                              "Service may be unavailable",
+                              "Customers should save their work beforehand"
+                          ],
+        "expected_characteristics":  [
+                                         "Concise",
+                                         "Professional",
+                                         "Preserves all critical details"
+                                     ],
+        "original_recipient":  "customers"
+    },
+    {
+        "id":  "eval_026",
+        "message":  "The server responded with error 503 at 14:35. We retried twice, but both attempts failed. The issue is still unresolved.",
+        "tone":  "professional",
+        "length":  "balanced",
+        "recipient":  "colleague",
+        "must_preserve":  [
+                              "Error code is 503",
+                              "Time is 14:35",
+                              "Two retry attempts failed",
+                              "Issue remains unresolved"
+                          ],
+        "expected_characteristics":  [
+                                         "Technically precise",
+                                         "Clear",
+                                         "Professional"
+                                     ],
+        "original_recipient":  "technical team"
+    },
+    {
+        "id":  "eval_027",
+        "message":  "I can complete the frontend by Friday if the API endpoint is available by Wednesday. Otherwise, delivery may be delayed.",
+        "tone":  "professional",
+        "length":  "balanced",
+        "recipient":  "senior",
+        "must_preserve":  [
+                              "Frontend completion by Friday is conditional",
+                              "API endpoint needed by Wednesday",
+                              "Delivery may be delayed otherwise"
+                          ],
+        "expected_characteristics":  [
+                                         "Clear",
+                                         "Preserves conditional commitment",
+                                         "Professional"
+                                     ],
+        "original_recipient":  "project manager"
+    },
+    {
+        "id":  "eval_028",
+        "message":  "not sure if the 2 pm meeting is confirmed. i heard it might be moved to 4 pm. can you verify?",
+        "tone":  "professional",
+        "length":  "balanced",
+        "recipient":  "colleague",
+        "must_preserve":  [
+                              "2 PM meeting is not confirmed",
+                              "Possible change to 4 PM is unverified",
+                              "Requests confirmation"
+                          ],
+        "expected_characteristics":  [
+                                         "Clear",
+                                         "Preserves uncertainty",
+                                         "Professional"
+                                     ]
+    },
+    {
+        "id":  "eval_029",
+        "message":  "The document is mostly complete, but the financial section still needs review. I can send the current version today if you need it.",
+        "tone":  "professional",
+        "length":  "detailed",
+        "recipient":  "senior",
+        "must_preserve":  [
+                              "Document is mostly complete",
+                              "Financial section needs review",
+                              "Current version can be sent today on request"
+                          ],
+        "expected_characteristics":  [
+                                         "Detailed",
+                                         "Professional",
+                                         "Preserves optional offer"
+                                     ],
+        "original_recipient":  "manager"
+    },
+    {
+        "id":  "eval_030",
+        "message":  "i know the deadline is tomorrow but i haven\u0027t received the required data yet. can you share it as soon as possible? otherwise i may not be able to finish on time",
+        "tone":  "professional",
+        "length":  "balanced",
+        "recipient":  "colleague",
+        "must_preserve":  [
+                              "Deadline is tomorrow",
+                              "Required data has not been received",
+                              "Requests data urgently",
+                              "Completion may be delayed without data"
+                          ],
+        "expected_characteristics":  [
+                                         "Professional",
+                                         "Urgency without hostility",
+                                         "Preserves dependency"
+                                     ]
+    }
+]
