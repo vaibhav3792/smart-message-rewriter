@@ -2,6 +2,8 @@
 
 A full-stack AI application that rewrites messages according to the desired tone, length, and recipient while preserving the original meaning and important details.
 
+![alt text](01.png) ![alt text](02.png)
+
 **Live Application:** https://smart-message-rewriter.vercel.app/
 
 **Backend API:** https://smart-message-rewriter-api.onrender.com/
