@@ -4,6 +4,7 @@ from app.schemas import RewriteRequest, RewriteResponse
 from app.rewriter import rewrite_message
 from fastapi.middleware.cors import CORSMiddleware
 from app.llm import LLMServiceError
+import os
 
 app = FastAPI(
     title="Smart Message Rewriter API",
@@ -11,16 +12,24 @@ app = FastAPI(
     version="1.0.0",
 )
 
+
+allowed_origins = [
+    origin.strip()
+    for origin in os.getenv(
+        "FRONTEND_ORIGINS",
+        "http://localhost:5173,http://127.0.0.1:5173",
+    ).split(",")
+    if origin.strip()
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
+    allow_origins=allowed_origins,
     allow_credentials=False,
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type"],
 )
+
 
 @app.get("/")
 def root():
